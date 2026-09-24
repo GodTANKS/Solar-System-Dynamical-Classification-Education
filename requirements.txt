@@ -1,0 +1,9 @@
+numpy
+pandas
+scikit-learn
+plotly==5.15.0
+astropy
+dash
+jupyter
+jupyter_nbextensions_configurator
+jupyter_contrib_nbextensions
