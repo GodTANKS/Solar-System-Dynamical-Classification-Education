@@ -23,7 +23,7 @@
 ## 📥 실습 파일 다운로드
 
 - **[📥 Colab용 파일 다운로드](https://raw.githubusercontent.com/GodTANKS/Solar-System-Dynamical-Classification-Education/main/downloads/solar-system-colab.zip)** — Colab Notebook + 원본 분석 함수 + 전체 카탈로그 CSV
-- **[🐍 원본 분석 함수 다운로드](https://raw.githubusercontent.com/GodTANKS/Solar-System-Dynamical-Classification-Education/main/src/solarsystem_analysis13.py)** — `solarsystem_analysis13.py`
+- **원본 분석 함수 `solarsystem_analysis13.py`는 Colab용 ZIP에 함께 포함되어 있습니다.**
 - **[📦 저장소 전체 ZIP 다운로드](https://github.com/GodTANKS/Solar-System-Dynamical-Classification-Education/archive/refs/heads/main.zip)**
 
 > **Jupyter Notebook용 실습키트도 준비되어 있습니다.** GitHub `downloads` 폴더에 ZIP을 추가하면 같은 방식으로 바로 다운로드할 수 있도록 연결합니다.
