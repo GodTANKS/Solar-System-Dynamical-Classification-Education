@@ -2,8 +2,9 @@
 
 실제 태양계 천체의 **궤도요소와 카탈로그 데이터**를 이용해 행성·왜소행성·소행성·혜성의 역학적 특성과 분류 기준을 탐구하는 교육 콘텐츠입니다.
 
-> **권장 실행:** Google Colab 원본 반영판  
-> **설치:** 필요 없음  
+> **권장 실행:** Google Colab 원본 반영판 (`.ipynb`)  
+> **공개 코드:** Colab Notebook + 원본 분석 함수 `src/solarsystem_analysis13.py`  
+> **설치:** Colab 사용 시 필요 없음  
 > **핵심 흐름:** 데이터 수집 → 전체 탐색 → 데이터 처리 → 세부 탐색 → 그래프 분석 → 개별 천체 2D/3D 궤도 분석 → 분류 정답 확인
 
 ---
@@ -34,6 +35,17 @@ Colab과 충돌하는 부분만 바꾸었습니다.
 
 ---
 
+## 📥 코드·파일 직접 받기
+
+브라우저에서 실행하지 않고 **Notebook과 원본 분석 코드를 파일로 내려받아** 확인·보관할 수 있습니다.
+
+- **[📓 Colab 원본 반영판 Notebook(.ipynb) 받기](https://github.com/GodTANKS/Solar-System-Dynamical-Classification-Education/raw/refs/heads/main/colab/%ED%83%9C%EC%96%91%EA%B3%84%20%EC%B2%9C%EC%B2%B4%20%EC%97%AD%ED%95%99%EC%A0%81%20%EB%B6%84%EB%A5%98_Colab_%EC%9B%90%EB%B3%B8%EB%B0%98%EC%98%81%ED%8C%90.ipynb)**
+- **[🐍 원본 분석 함수 `solarsystem_analysis13.py` 받기](https://github.com/GodTANKS/Solar-System-Dynamical-Classification-Education/raw/refs/heads/main/src/solarsystem_analysis13.py)**
+- **[📦 저장소 전체 ZIP 받기](https://github.com/GodTANKS/Solar-System-Dynamical-Classification-Education/archive/refs/heads/main.zip)**
+
+> 이 저장소의 공개 실행 Notebook은 **Google Colab용 원본 반영판**입니다. 원 연구의 Jupyter 분석 흐름을 최대한 유지했지만 `/content` 경로 등 Colab 환경에 맞춘 부분이 있으므로, 현재 `.ipynb`를 로컬 Jupyter에서 그대로 실행하는 방식은 기본 사용법으로 안내하지 않습니다.
+
+---
 ## 📁 저장소 구성
 
 | 경로 | 설명 |
@@ -42,7 +54,7 @@ Colab과 충돌하는 부분만 바꾸었습니다.
 | `colab/태양계 천체 역학적 분류_Colab_간편판.ipynb` | 핵심 기능을 빠르게 체험하는 축약판 |
 | `src/solarsystem_analysis13.py` | 논문용 원본 궤도 계산·데이터 처리 함수 |
 | `data/catalog_b64/` | 전체 카탈로그 자동 복원용 압축 데이터 |
-| `requirements.txt` | 로컬 Jupyter 실행용 패키지 목록 |
+| `requirements.txt` | Python 패키지 목록(로컬 환경 참고용) |
 
 전체 카탈로그는 Colab 시작 셀에서 자동으로 복원되므로 사용자가 CSV를 따로 업로드할 필요가 없습니다.
 
