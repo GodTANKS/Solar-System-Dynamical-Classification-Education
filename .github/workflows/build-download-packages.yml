@@ -1,0 +1,58 @@
+name: Build download packages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'colab/**'
+      - 'src/solarsystem_analysis13.py'
+      - 'data/catalog_b64/**'
+      - 'jupyter/**'
+      - 'requirements.txt'
+      - '.github/workflows/build-download-packages.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Restore original CSV
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64, zlib
+          parts = []
+          for p in sorted(Path("data/catalog_b64").glob("part-*.txt")):
+              parts.append(p.read_text(encoding="ascii").strip())
+          raw = zlib.decompress(base64.b64decode("".join(parts)))
+          Path("downloads").mkdir(exist_ok=True)
+          Path("downloads/dwarfplanet_asteroid_comet_analysis.csv").write_bytes(raw)
+          print("restored", len(raw), "bytes")
+          PY
+
+      - name: Build ZIP packages
+        run: |
+          mkdir -p downloads
+          rm -f downloads/solar-system-colab.zip downloads/solar-system-jupyter.zip
+          zip -j -q downloads/solar-system-colab.zip             "colab/태양계 천체 역학적 분류_Colab_원본반영판.ipynb"             "src/solarsystem_analysis13.py"             "downloads/dwarfplanet_asteroid_comet_analysis.csv"             "requirements.txt"
+
+          if [ -f "jupyter/태양계 천체 역학적 분류_Jupyter_Notebook용.ipynb" ]; then
+            zip -j -q downloads/solar-system-jupyter.zip               "jupyter/태양계 천체 역학적 분류_Jupyter_Notebook용.ipynb"               "src/solarsystem_analysis13.py"               "downloads/dwarfplanet_asteroid_comet_analysis.csv"               "requirements.txt"
+          fi
+
+      - name: Commit packages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads
+          if git diff --cached --quiet; then
+            echo "No package changes"
+          else
+            git commit -m "Update downloadable notebook packages [skip ci]"
+            git push
+          fi
