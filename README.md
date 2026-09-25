@@ -2,9 +2,8 @@
 
 실제 태양계 천체의 **궤도요소와 카탈로그 데이터**를 이용해 행성·왜소행성·소행성·혜성의 역학적 특성과 분류 기준을 탐구하는 교육 콘텐츠입니다.
 
-> **권장 실행:** Google Colab  
-> **공개 코드:** Colab용 Notebook + 원본 분석 함수 `src/solarsystem_analysis13.py`  
-> **설치:** Colab 사용 시 필요 없음  
+> **실행 방식:** Google Colab 또는 Jupyter Notebook  
+> **다운로드:** Colab용 파일 / Jupyter Notebook용 파일  
 > **핵심 흐름:** 데이터 수집 → 전체 탐색 → 데이터 처리 → 세부 탐색 → 그래프 분석 → 개별 천체 2D/3D 궤도 분석 → 분류 정답 확인
 
 ---
@@ -22,11 +21,13 @@
 
 ## 📥 실습 파일 다운로드
 
-- **[📥 Colab용 파일 다운로드](https://raw.githubusercontent.com/GodTANKS/Solar-System-Dynamical-Classification-Education/main/downloads/solar-system-colab.zip)** — Colab Notebook + 원본 분석 함수 + 전체 카탈로그 CSV
-- **원본 분석 함수 `solarsystem_analysis13.py`는 Colab용 ZIP에 함께 포함되어 있습니다.**
+- **[📥 Colab용 파일 다운로드](https://raw.githubusercontent.com/GodTANKS/Solar-System-Dynamical-Classification-Education/main/downloads/solar-system-colab.zip)** — Colab Notebook + 분석 함수 + 데이터
+- **[📓 Jupyter Notebook용 다운로드](https://raw.githubusercontent.com/GodTANKS/Solar-System-Dynamical-Classification-Education/main/downloads/solar-system-jupyter.zip)** — Jupyter Notebook + 분석 함수 + 데이터 + 실행 안내
 - **[📦 저장소 전체 ZIP 다운로드](https://github.com/GodTANKS/Solar-System-Dynamical-Classification-Education/archive/refs/heads/main.zip)**
 
-> **Jupyter Notebook용 실습키트도 준비되어 있습니다.** GitHub `downloads` 폴더에 ZIP을 추가하면 같은 방식으로 바로 다운로드할 수 있도록 연결합니다.
+**실행 형식**
+- Google Colab용: 브라우저에서 실행
+- Jupyter Notebook용: PC의 Python/Jupyter 환경에서 실행
 
 ---
 ## 📁 저장소 구성
@@ -34,7 +35,7 @@
 | 경로 | 설명 |
 |---|---|
 | `colab/태양계 천체 역학적 분류_Colab_원본반영판.ipynb` | Google Colab용 Notebook |
-| `src/solarsystem_analysis13.py` | 논문용 원본 궤도 계산·데이터 처리 함수 |
+| `src/solarsystem_analysis13.py` | Notebook에서 사용하는 궤도 계산·데이터 처리 함수 |
 | `data/catalog_b64/` | 전체 카탈로그 자동 복원용 압축 데이터 |
 | `requirements.txt` | Python 패키지 목록(로컬 환경 참고용) |
 
