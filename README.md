@@ -3,7 +3,7 @@
 실제 태양계 천체의 **궤도요소와 카탈로그 데이터**를 이용해 행성·왜소행성·소행성·혜성의 역학적 특성과 분류 기준을 탐구하는 교육 콘텐츠입니다.
 
 > **권장 실행:** Google Colab  
-> **공개 코드:** Colab용 Notebook + Jupyter Notebook용 자료 + 원본 분석 함수 `src/solarsystem_analysis13.py`  
+> **공개 코드:** Colab용 Notebook + 원본 분석 함수 `src/solarsystem_analysis13.py`  
 > **설치:** Colab 사용 시 필요 없음  
 > **핵심 흐름:** 데이터 수집 → 전체 탐색 → 데이터 처리 → 세부 탐색 → 그래프 분석 → 개별 천체 2D/3D 궤도 분석 → 분류 정답 확인
 
@@ -26,7 +26,7 @@
 - **[🐍 원본 분석 함수 다운로드](https://raw.githubusercontent.com/GodTANKS/Solar-System-Dynamical-Classification-Education/main/src/solarsystem_analysis13.py)** — `solarsystem_analysis13.py`
 - **[📦 저장소 전체 ZIP 다운로드](https://github.com/GodTANKS/Solar-System-Dynamical-Classification-Education/archive/refs/heads/main.zip)**
 
-> **Jupyter Notebook용 파일도 별도로 제공합니다.** Jupyter용 Notebook은 로컬 Jupyter에서 실행하는 자료이며, Notebook·원본 분석 함수·CSV를 한 묶음으로 내려받도록 구성합니다.
+> **Jupyter Notebook용 실습키트도 준비되어 있습니다.** GitHub `downloads` 폴더에 ZIP을 추가하면 같은 방식으로 바로 다운로드할 수 있도록 연결합니다.
 
 ---
 ## 📁 저장소 구성
